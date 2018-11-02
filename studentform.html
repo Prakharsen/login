@@ -1,0 +1,65 @@
+	
+		<div>
+			<form>
+					
+				<div>
+					<div id="content">
+					
+						<label>Student Name <input type="text" ng-model="studentname" placeholder="student name"></label><br><br>
+						<label>Sex <select ng-model="selectedsex" ng-options="s for s in sex"></select></label><br><br>
+						<label>Relegion<input type="text" ng-model="relegion" placeholder="enter your relegion"></label><br><br>
+						<label> Birth Date <input type="date" ui-date="dateOptions" ui-date-format="mm/dd/yyyy" ng-model="date" /></label><br><br>
+						<label>Email<input type="email" ng-model="email" required></label><br><br>
+						<label>Permanent Address<input type="text" ng-model="paddress"></label><br><br>
+					</div>
+						<div id="contentr">
+							
+								<label>Father Name</label><input type="text" placeholder="Father name" ng-model="fname"><br><br>
+								<label>Category  <select  ng-model="selectedcategory" ng-options="c for c in category"></select> </label><br><br>
+								<label>Mobile Number<input type="text" ng-model="mobilenumber"></label><br><br>
+								<label>Correspondence Address<input type="text" placeholder="enter your correspondence address" ng-model="caddress"></label> <br><br>
+		
+						</div>
+				</div>
+			</form><br><br>
+			
+			<button type="button" ng-click="add()" class="btn btn-info btn-md">Add Student Details</button>
+			<form>
+				<fieldset>
+					<table class="table table-striped">
+						<thead>
+						  <tr>
+							<th>StudentName</th>
+							<th>Sex</th>
+							<th>Relegion</th>
+							<th>Birth date</th>
+							<th>Email</th>
+							<th>Permanent address</th>
+							<th>FatherName</th>
+							<th>Category</th>
+							<th>Mobile Number</th>
+							<th>Correspondence Address</th>
+							
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr ng-repeat="item in studentlist.items track by $index">
+							<td>{{item.studentname}}</td>
+							<td>{{item.selectedsex}}</td>
+							<td>{{item.relegion}}</td>
+							<td>{{item.date}}</td>
+							<td>{{item.email}}</td>
+							<td>{{item.paddress}}</td>
+							<td>{{item.fname}}</td>
+							<td>{{item.selectedcategory}}</td>
+							<td>{{item.mobilenumber}}</td>
+							<td>{{item.caddress}}</td>
+							<td><input type="button" ng-click="delete($index)" value="REMOVE EXPENSE" class="btn btn-warning"></td>
+						  </tr>
+						  
+
+						</tbody>
+					</table>
+				</fieldset>
+			</form>
+		</div>

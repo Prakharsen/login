@@ -1,0 +1,17 @@
+
+	#contentr{
+				float:right;
+				margin-top:-280px;
+				margin-right:200px;
+			}
+	#content{
+				margin-top:60px;
+			}		
+			.glyphicon-plus-sign{background-color: white;
+						border: 1px solid #42a7f4;
+						border-radius: 18px;
+						height: 40px !important;
+						padding-top: 6px;
+						text-align: center;
+						width: 40px !important;
+						color:#42a7f4;}
